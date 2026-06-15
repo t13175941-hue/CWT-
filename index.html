@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chattis Warrior Tournament</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@500;600;700&display=swap');
+        
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: #0b0f19;
+        }
+        .font-cyber {
+            font-family: 'Orbitron', sans-serif;
+        }
+        /* Custom Neon Glows */
+        .neon-border-orange {
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.4);
+        }
+        .neon-border-purple {
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+        }
+        .neon-text-cyan {
+            text-shadow: 0 0 10px rgba(6, 182, 212, 0.6);
+        }
+        /* Smooth Scale for Team Logos */
+        .team-logo-container img {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .team-logo-container:hover img {
+            transform: scale(1.18) rotate(3deg);
+            filter: drop-shadow(0 0 12px #22c55e);
+        }
+        /* Tab switching active style */
+        .active-tab {
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            color: #ffffff;
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.4);
+        }
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen pb-24">
+
+    <!-- HEADER / HERO SECTION -->
+    <header class="relative bg-gradient-to-b from-green-950/40 to-slate-900 border-b border-green-500/30 pt-8 pb-6 px-4 text-center">
+        <div class="absolute top-2 right-2 bg-green-500/10 border border-green-500/30 rounded-full px-3 py-1 text-xs text-green-400 uppercase font-cyber tracking-wider animate-pulse">
+            <i class="fa-solid fa-circle text-[10px] mr-1.5 align-middle"></i>Live Stats Template
+        </div>
+        
+        <h1 class="font-cyber text-3xl md:text-5xl font-black tracking-wider uppercase text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-cyan-400 to-emerald-500 drop-shadow-md">
+            CHATTIS WARRIOR
+        </h1>
+        <p class="font-cyber text-sm md:text-md tracking-[0.25em] text-gray-400 mt-1">TOURNAMENT</p>
+
+        <!-- Tournament Overview Badges -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-2.5 max-w-4xl mx-auto mt-6 text-xs md:text-sm font-semibold">
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-2.5 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-calendar-days text-green-400 text-lg"></i>
+                <div class="text-left"><p class="text-[10px] text-gray-500 uppercase leading-none">Date & Day</p><p class="text-gray-200">21st June, Sunday</p></div>
+            </div>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-2.5 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-map-location-dot text-cyan-400 text-lg"></i>
+                <div class="text-left"><p class="text-[10px] text-gray-500 uppercase leading-none">Venue Ground</p><p class="text-gray-200">Chattis field</p></div>
+            </div>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-2.5 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-baseball text-orange-400 text-lg animate-spin" style="animation-duration: 8s;"></i>
+                <div class="text-left"><p class="text-[10px] text-gray-500 uppercase leading-none">Match Ball</p><p class="text-gray-200">Vicky Ball (6 Overs)</p></div>
+            </div>
+            <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-2.5 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-hand-holding-dollar text-emerald-400 text-lg"></i>
+                <div class="text-left"><p class="text-[10px] text-gray-500 uppercase leading-none">Entry Fee</p><p class="text-gray-200">₹300 Per Team</p></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PRIZE POOL & ORGANIZERS SUMMARY BAR -->
+    <section class="max-w-6xl mx-auto px-4 mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+        <!-- Prize Box -->
+        <div class="md:col-span-2 bg-gradient-to-r from-slate-900 to-slate-950 border border-slate-800/80 rounded-2xl p-4 flex flex-col justify-between">
+            <h3 class="font-cyber text-xs tracking-wider text-gray-400 uppercase mb-3 flex items-center gap-2">
+                <i class="fa-solid fa-trophy text-yellow-500"></i> Tournament Rewards
+            </h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                <div class="bg-yellow-500/5 border border-yellow-500/20 rounded-xl p-2.5 text-center">
+                    <p class="text-[10px] uppercase tracking-wider text-yellow-500 font-bold">Champions</p>
+                    <p class="text-sm font-bold text-gray-100 mt-0.5">Trophy + Medals</p>
+                </div>
+                <div class="bg-slate-400/5 border border-slate-400/20 rounded-xl p-2.5 text-center">
+                    <p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Runners Up</p>
+                    <p class="text-sm font-bold text-gray-100 mt-0.5">Premium Trophy</p>
+                </div>
+                <div class="bg-cyan-500/5 border border-cyan-500/20 rounded-xl p-2.5 text-center col-span-2 sm:col-span-1">
+                    <p class="text-[10px] uppercase tracking-wider text-cyan-400 font-bold">Individual Honors</p>
+                    <p class="text-xs font-semibold text-gray-300 mt-0.5">Medals for Top Performers</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Static Contact Widget (No links or redirection) -->
+        <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 rounded-2xl p-4">
+            <h3 class="font-cyber text-xs tracking-wider text-gray-400 uppercase mb-2.5 flex items-center gap-2">
+                <i class="fa-solid fa-phone text-green-400"></i> Organiser's Contact
+            </h3>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+                <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-2 flex items-center gap-2">
+                    <i class="fa-solid fa-user text-green-400"></i>
+                    <div><p class="font-bold text-gray-200">Vivek</p><p class="text-[10px] font-mono text-gray-400">86582 43383</p></div>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-2 flex items-center gap-2">
+                    <i class="fa-solid fa-user text-green-400"></i>
+                    <div><p class="font-bold text-gray-200">Chandan</p><p class="text-[10px] font-mono text-gray-400">63725 26337</p></div>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-2 flex items-center gap-2">
+                    <i class="fa-solid fa-user text-green-400"></i>
+                    <div><p class="font-bold text-gray-200">Jaga</p><p class="text-[10px] font-mono text-gray-400">72054 29805</p></div>
+                </div>
+                <div class="bg-slate-800/50 border border-slate-700/50 rounded-xl p-2 flex items-center gap-2">
+                    <i class="fa-solid fa-user text-green-400"></i>
+                    <div><p class="font-bold text-gray-200">Lala</p><p class="text-[10px] font-mono text-gray-400">94379 42900</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN DYNAMIC SECTIONS CONTAINER -->
+    <main class="max-w-6xl mx-auto px-4 mt-8">
+        
+        <!-- SECTION 1: MATCHUP HUB & NRR CALCULATOR -->
+        <div id="fixtures-section" class="tab-content space-y-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Brackets Layout -->
+                <div class="lg:col-span-2 space-y-6">
+                    <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400 border-l-4 border-green-500 pl-2">
+                        Matchup Center & Brackets
+                    </h2>
+
+                    <!-- Qualifier Stage Card -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-4">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                            <span class="font-cyber text-xs tracking-wider text-cyan-400 font-bold uppercase">Stage 1: Qualifiers</span>
+                            <span class="text-[11px] bg-cyan-500/10 text-cyan-400 px-2 py-0.5 rounded border border-cyan-500/20">3 Winners Advance Directly</span>
+                        </div>
+                        
+                        <!-- Match 1 -->
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 flex items-center justify-between">
+                            <div class="w-2/5 text-right font-bold pr-2">Team 1</div>
+                            <div class="w-1/5 bg-slate-900 border border-slate-800 rounded text-center text-[10px] font-cyber font-bold py-1 text-gray-400">VS</div>
+                            <div class="w-2/5 text-left font-bold pl-2">Team 2</div>
+                        </div>
+                        <!-- Match 2 -->
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 flex items-center justify-between">
+                            <div class="w-2/5 text-right font-bold pr-2">Team 3</div>
+                            <div class="w-1/5 bg-slate-900 border border-slate-800 rounded text-center text-[10px] font-cyber font-bold py-1 text-gray-400">VS</div>
+                            <div class="w-2/5 text-left font-bold pl-2">Team 4</div>
+                        </div>
+                        <!-- Match 3 -->
+                        <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 flex items-center justify-between">
+                            <div class="w-2/5 text-right font-bold pr-2">Team 5</div>
+                            <div class="w-1/5 bg-slate-900 border border-slate-800 rounded text-center text-[10px] font-cyber font-bold py-1 text-gray-400">VS</div>
+                            <div class="w-2/5 text-left font-bold pl-2">Team 6</div>
+                        </div>
+                    </div>
+
+                    <!-- Playoffs Card -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-4">
+                        <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+                            <span class="font-cyber text-xs tracking-wider text-purple-400 font-bold uppercase">Stage 2: Playoffs</span>
+                            <span class="text-[11px] bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded border border-purple-500/20">4 Teams Bracket</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-3 space-y-2">
+                                <p class="text-[10px] uppercase text-purple-400 font-bold font-cyber">Semifinal 1</p>
+                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Qualifier #1</span> <span class="font-bold text-gray-500">TBD</span></p>
+                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Wildcard (Highest NRR Loser)</span> <span class="font-bold text-gray-500">TBD</span></p>
+                            </div>
+                            <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-3 space-y-2">
+                                <p class="text-[10px] uppercase text-purple-400 font-bold font-cyber">Semifinal 2</p>
+                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Qualifier #2</span> <span class="font-bold text-gray-500">TBD</span></p>
+                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Qualifier #3</span> <span class="font-bold text-gray-500">TBD</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grand Final Card -->
+                    <div class="bg-gradient-to-r from-yellow-950/20 via-slate-900 to-yellow-950/20 border-2 border-yellow-500/30 rounded-2xl p-5 text-center relative overflow-hidden">
+                        <div class="absolute -top-6 -right-6 w-16 h-16 bg-yellow-500/10 rounded-full blur-xl"></div>
+                        <p class="font-cyber text-sm tracking-widest text-yellow-500 font-black uppercase mb-3"><i class="fa-solid fa-crown mr-1"></i> The Grand Final <i class="fa-solid fa-crown ml-1"></i></p>
+                        <div class="flex items-center justify-center gap-4 max-w-md mx-auto">
+                            <div class="w-2/5 font-cyber font-bold text-sm text-gray-400 tracking-wide text-right">Winner SF 1</div>
+                            <div class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/30 rounded font-cyber text-xs text-yellow-500 font-bold">VS</div>
+                            <div class="w-2/5 font-cyber font-bold text-sm text-gray-400 tracking-wide text-left">Winner SF 2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live NRR Tracker Table Side Panel -->
+                <div class="space-y-4">
+                    <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-orange-400 border-l-4 border-orange-500 pl-2">
+                        NRR Standings
+                    </h2>
+                    
+                    <!-- Explanation Alert Banner -->
+                    <div class="bg-orange-500/5 border border-orange-500/20 rounded-xl p-3 text-xs text-orange-200/90 leading-relaxed">
+                        <strong class="text-orange-400 font-cyber block mb-1 uppercase"><i class="fa-solid fa-circle-info mr-1"></i> Wildcard Rule Math:</strong>
+                        The 3 match losers are ranked below. The losing team displaying the highest **Net Run Rate (NRR)** will secure the 4th playoff spot. 
+                        <span class="block mt-1.5 text-[11px] font-mono bg-black/40 p-1.5 rounded text-gray-400">NRR = (Runs Scored / Overs Faced) - (Runs Conceded / Overs Bowled)</span>
+                        <span class="block mt-1 text-[10px] text-gray-500 italic">*If a team gets completely bowled out, the full 6 overs apply to the calculations.*</span>
+                    </div>
+
+                    <!-- NRR Table Object -->
+                    <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
+                        <table class="w-full text-left text-xs border-collapse">
+                            <thead>
+                                <tr class="bg-slate-950 border-b border-slate-800 font-cyber text-[10px] tracking-wider text-gray-400 uppercase">
+                                    <th class="p-3">Team</th>
+                                    <th class="p-3 text-center">Status</th>
+                                    <th class="p-3 text-right">NRR</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800/60 font-semibold">
+                                <tr class="hover:bg-slate-850/40 transition-colors">
+                                    <td class="p-3 text-gray-200">Team 1</td>
+                                    <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
+                                    <td class="p-3 text-right font-mono text-orange-400">0.000</td>
+                                </tr>
+                                <tr class="hover:bg-slate-850/40 transition-colors">
+                                    <td class="p-3 text-gray-200">Team 2</td>
+                                    <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
+                                    <td class="p-3 text-right font-mono text-orange-400">0.000</td>
+                                </tr>
+                                <tr class="hover:bg-slate-850/40 transition-colors">
+                                    <td class="p-3 text-gray-200">Team 3</td>
+                                    <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
+                                    <td class="p-3 text-right font-mono text-orange-400">0.000</td>
+                                </tr>
+                                <tr class="hover:bg-slate-850/40 transition-colors">
+                                    <td class="p-3 text-gray-200">Team 4</td>
+                                    <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
+                                    <td class="p-3 text-right font-mono text-orange-400">0.000</td>
+                                </tr>
+                                <tr class="hover:bg-slate-850/40 transition-colors">
+                                    <td class="p-3 text-gray-200">Team 5</td>
+                                    <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
+                                    <td class="p-3 text-right font-mono text-orange-400">0.000</td>
+                                </tr>
+                                <tr class="hover:bg-slate-850/40 transition-colors">
+                                    <td class="p-3 text-gray-200">Team 6</td>
+                                    <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
+                                    <td class="p-3 text-right font-mono text-orange-400">0.000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 2: THE 6 SQUADS AND HOVER LOGOS -->
+        <div id="teams-section" class="tab-content hidden space-y-6">
+            <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400 border-l-4 border-green-500 pl-2">
+                Participating Teams & Squads
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <script>
+                    const totalTeamsCount = 6;
+                    let teamsHTML = '';
+                    for (let t = 1; t <= totalTeamsCount; t++) {
+                        teamsHTML += `
+                        <div class="bg-slate-900 border border-slate-800/80 hover:border-green-500/30 rounded-2xl p-4 transition-all duration-300 shadow-lg">
+                            <div class="flex items-center gap-4 border-b border-slate-800 pb-3 mb-3">
+                                <div class="team-logo-container w-14 h-14 bg-slate-950 border border-slate-800 rounded-xl flex items-center justify-center p-1 overflow-hidden shrink-0">
+                                    <img src="https://placehold.co/150x150/0f172a/22c55e?text=T${t}" alt="Team Logo" class="w-full h-full object-contain rounded">
+                                </div>
+                                <div>
+                                    <h3 class="font-cyber font-bold text-lg text-gray-100">Team - ${t}</h3>
+                                    <span class="text-[10px] tracking-wider font-cyber font-bold uppercase bg-green-500/10 text-green-400 px-2 py-0.5 rounded border border-green-500/20">Active Squad</span>
+                                </div>
+                            </div>
+                            <ul class="space-y-1.5 text-xs font-semibold">
+                                <li class="bg-gradient-to-r from-yellow-500/10 to-transparent border border-yellow-500/20 px-2.5 py-1.5 rounded-lg flex items-center justify-between">
+                                    <span class="text-yellow-400"><i class="fa-solid fa-star mr-1.5"></i> TBD</span>
+                                    <span class="font-cyber text-[9px] bg-yellow-500/20 text-yellow-400 px-1.5 py-0.2 rounded font-bold uppercase">Captain</span>
+                                </li>
+                                <li class="bg-slate-950/40 border border-slate-800/50 text-gray-300 px-2.5 py-1.5 rounded-lg flex justify-between"><span>2. TBD</span><span class="text-gray-600 text-[10px]">Player</span></li>
+                                <li class="bg-slate-950/40 border border-slate-800/50 text-gray-300 px-2.5 py-1.5 rounded-lg flex justify-between"><span>3. TBD</span><span class="text-gray-600 text-[10px]">Player</span></li>
+                                <li class="bg-slate-950/40 border border-slate-800/50 text-gray-300 px-2.5 py-1.5 rounded-lg flex justify-between"><span>4. TBD</span><span class="text-gray-600 text-[10px]">Player</span></li>
+                                <li class="bg-slate-950/40 border border-slate-800/50 text-gray-300 px-2.5 py-1.5 rounded-lg flex justify-between"><span>5. TBD</span><span class="text-gray-600 text-[10px]">Player</span></li>
+                                <li class="bg-slate-950/40 border border-slate-800/50 text-gray-300 px-2.5 py-1.5 rounded-lg flex justify-between"><span>6. TBD</span><span class="text-gray-600 text-[10px]">Player</span></li>
+                                <li class="bg-slate-950/40 border border-slate-800/50 text-gray-300 px-2.5 py-1.5 rounded-lg flex justify-between"><span>7. TBD</span><span class="text-gray-600 text-[10px]">Player</span></li>
+                            </ul>
+                        </div>`;
+                    }
+                    document.write(teamsHTML);
+                </script>
+            </div>
+        </div>
+
+        <!-- SECTION 3: 42 PLAYER MASTER REGISTRY -->
+        <div id="registry-section" class="tab-content hidden space-y-6">
+            <div class="flex items-center justify-between border-l-4 border-green-500 pl-2">
+                <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400">
+                    Official Tournament Registry
+                </h2>
+                <span class="font-cyber text-xs bg-slate-900 border border-slate-800 px-3 py-1 rounded-full text-gray-400 font-bold">Total Players: 42</span>
+            </div>
+
+            <!-- Modern Compact Matrix Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                <script>
+                    let registryHTML = '';
+                    for (let p = 1; p <= 42; p++) {
+                        registryHTML += `
+                        <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800/80 rounded-xl p-2.5 flex items-center gap-2.5 shadow-sm hover:border-slate-700 transition-colors">
+                            <div class="w-7 h-7 bg-slate-800 border border-slate-700/60 font-cyber font-bold text-xs text-gray-400 rounded-lg flex items-center justify-center shrink-0">
+                                ${p < 10 ? '0' + p : p}
+                            </div>
+                            <div class="overflow-hidden">
+                                <p class="font-bold text-sm text-gray-200 tracking-wide truncate">TBD</p>
+                                <p class="text-[10px] uppercase text-gray-500 font-medium tracking-wider">Registered</p>
+                            </div>
+                        </div>`;
+                    }
+                    document.write(registryHTML);
+                </script>
+            </div>
+        </div>
+
+        <!-- SECTION 4: THE 5 HONOR LEADERBOARDS (TOP 5 HIGHLIGHTS) -->
+        <div id="stats-section" class="tab-content hidden space-y-8">
+            <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400 border-l-4 border-green-500 pl-2">
+                Tournament Stats & Honors Center
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Leaderboard 1: Orange Cap -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 neon-border-orange relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-orange-500/10 text-orange-500 font-cyber text-[9px] tracking-widest font-black px-3 py-1 uppercase rounded-bl-xl border-l border-b border-orange-500/20">
+                        Batting
+                    </div>
+                    <h3 class="font-cyber font-bold text-sm text-orange-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                        <i class="fa-solid fa-graduation-cap"></i> Orange Cap Leaderboard
+                    </h3>
+                    <div class="space-y-1.5 text-xs">
+                        <div class="bg-gradient-to-r from-orange-500/20 to-orange-500/5 border border-orange-500/30 rounded-xl p-2.5 flex items-center justify-between font-bold">
+                            <div class="flex items-center gap-2">
+                                <span class="font-cyber text-orange-400">#1</span><span>TBD</span>
+                            </div>
+                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>M: 0</span><span>Avg: 0.0</span><span class="text-orange-400 font-bold">Runs: 0</span></div>
+                        </div>
+                        <script>
+                            for(let r=2; r<=5; r++){
+                                document.write(`
+                                <div class="bg-slate-950/60 border border-slate-800/60 rounded-xl p-2.5 flex items-center justify-between font-semibold text-gray-400">
+                                    <div class="flex items-center gap-2"><span class="font-cyber text-gray-600 font-bold">#${r}</span><span>TBD</span></div>
+                                    <div class="font-mono flex gap-4 text-[11px]"><span>M: 0</span><span>Avg: 0.0</span><span class="text-gray-300">Runs: 0</span></div>
+                                </div>`);
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Leaderboard 2: Purple Cap -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 neon-border-purple relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-purple-500/10 text-purple-500 font-cyber text-[9px] tracking-widest font-black px-3 py-1 uppercase rounded-bl-xl border-l border-b border-purple-500/20">
+                        Bowling
+                    </div>
+                    <h3 class="font-cyber font-bold text-sm text-purple-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                        <i class="fa-solid fa-graduation-cap"></i> Purple Cap Leaderboard
+                    </h3>
+                    <div class="space-y-1.5 text-xs">
+                        <div class="bg-gradient-to-r from-purple-500/20 to-purple-500/5 border border-purple-500/30 rounded-xl p-2.5 flex items-center justify-between font-bold">
+                            <div class="flex items-center gap-2">
+                                <span class="font-cyber text-purple-400">#1</span><span>TBD</span>
+                            </div>
+                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>M: 0</span><span>Econ: 0.0</span><span class="text-purple-400 font-bold">Wkts: 0</span></div>
+                        </div>
+                        <script>
+                            for(let r=2; r<=5; r++){
+                                document.write(`
+                                <div class="bg-slate-950/60 border border-slate-800/60 rounded-xl p-2.5 flex items-center justify-between font-semibold text-gray-400">
+                                    <div class="flex items-center gap-2"><span class="font-cyber text-gray-600 font-bold">#${r}</span><span>TBD</span></div>
+                                    <div class="font-mono flex gap-4 text-[11px]"><span>M: 0</span><span>Econ: 0.0</span><span class="text-gray-300">Wkts: 0</span></div>
+                                </div>`);
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Leaderboard 3: Best Fielder -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 relative overflow-hidden">
+                    <h3 class="font-cyber font-bold text-sm text-cyan-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                        <i class="fa-solid fa-hand-glove"></i> Best Fielder
+                    </h3>
+                    <div class="space-y-1.5 text-xs">
+                        <div class="bg-gradient-to-r from-cyan-500/20 to-cyan-500/5 border border-cyan-500/30 rounded-xl p-2.5 flex items-center justify-between font-bold">
+                            <div class="flex items-center gap-2"><span class="font-cyber text-cyan-400">#1</span><span>TBD</span></div>
+                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>Matches: 0</span><span class="text-cyan-400 font-bold">Points: 0</span></div>
+                        </div>
+                        <script>
+                            for(let r=2; r<=5; r++){
+                                document.write(`
+                                <div class="bg-slate-950/60 border border-slate-800/60 rounded-xl p-2.5 flex items-center justify-between font-semibold text-gray-400">
+                                    <div class="flex items-center gap-2"><span class="font-cyber text-gray-600 font-bold">#${r}</span><span>TBD</span></div>
+                                    <div class="font-mono flex gap-4 text-[11px]"><span>Matches: 0</span><span class="text-gray-300">Points: 0</span></div>
+                                </div>`);
+                            }
+                        </script>
+                    </div>
+                </div>
+
+                <!-- Leaderboard 4: Man Of The Tournament -->
+                <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 relative overflow-hidden">
+                    <h3 class="font-cyber font-bold text-sm text-yellow-500 uppercase tracking-wider mb-3 flex items-center gap-1.5">
+                        <i class="fa-solid fa-award"></i> Man Of The Tournament
+                    </h3>
+                    <div class="space-y-1.5 text-xs">
+                        <div class="bg-gradient-to-r from-yellow-500/20 to-yellow-500/5 border border-yellow-500/30 rounded-xl p-2.5 flex items-center justify-between font-bold">
+                            <div class="flex items-center gap-2"><span class="font-cyber text-yellow-500">#1</span><span>TBD</span></div>
+                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>Matches: 0</span><span class="text-yellow-400 font-bold">Rating: 0.0</span></div>
+                        </div>
+                        <script>
+                            for(let r=2; r<=5; r++){
+                                document.write(`
+                                <div class="bg-slate-950/60 border border-slate-800/60 rounded-xl p-2.5 flex items-center justify-between font-semibold text-gray-400">
+                                    <div class="flex items-center gap-2"><span class="font-cyber text-gray-600 font-bold">#${r}</span><span>TBD</span></div>
+                                    <div class="font-mono flex gap-4 text-[11px]"><span>Matches: 0</span><span class="text-gray-300">Rating: 0.0</span></div>
+                                </div>`);
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leaderboard 5: Best Discipline Table (6 Teams Ranked) -->
+            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-3">
+                <h3 class="font-cyber font-bold text-sm text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
+                    <i class="fa-solid fa-scale-balanced"></i> Fair Play & Team Discipline Ranking
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+                    <div class="bg-gradient-to-r from-emerald-500/20 to-emerald-500/5 border border-emerald-500/30 rounded-xl p-3 flex items-center justify-between font-bold">
+                        <div class="flex items-center gap-2"><span class="font-cyber text-emerald-400">#1</span><span>Team - 1</span></div>
+                        <span class="font-mono bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded text-[11px]">100 Pts</span>
+                    </div>
+                    <script>
+                        for(let t=2; t<=6; t++) {
+                            document.write(`
+                            <div class="bg-slate-950/60 border border-slate-800/60 rounded-xl p-3 flex items-center justify-between font-semibold text-gray-400">
+                                <div class="flex items-center gap-2"><span class="font-cyber text-gray-600 font-bold">#${t}</span><span>Team - ${t}</span></div>
+                                <span class="font-mono bg-slate-900 text-gray-500 px-2 py-0.5 rounded text-[11px]">100 Pts</span>
+                            </div>`);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 5: ACCORDION INTERACTIVE RULES AND REGULATIONS -->
+        <div id="rules-section" class="tab-content hidden space-y-6">
+            <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400 border-l-4 border-green-500 pl-2">
+                Rules & Regulations
+            </h2>
+            
+            <div class="space-y-3 max-w-4xl">
+                <!-- Rule Item 1 -->
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion('rule-1')" class="w-full text-left p-4 font-bold text-sm font-cyber uppercase tracking-wide text-gray-200 hover:text-green-400 flex justify-between items-center bg-slate-950/40 transition-colors">
+                        <span>1. Match Duration & Overs Limit</span>
+                        <i id="icon-rule-1" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div id="rule-1" class="hidden p-4 text-xs text-gray-400 border-t border-slate-850 bg-slate-900/60 space-y-2 leading-relaxed">
+                        <p>• Every normal league match will strictly consist of **6 overs** per innings.</p>
+                        <p>• A maximum bowling constraint applies: **No single bowler can deliver more than 2 overs** in an innings.</p>
+                        <p>• To ensure seamless schedule tracking, innings must be completed inside **25 minutes**. Slow over rates are subject to immediate run penalties.</p>
+                    </div>
+                </div>
+
+                <!-- Rule Item 2 -->
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion('rule-2')" class="w-full text-left p-4 font-bold text-sm font-cyber uppercase tracking-wide text-gray-200 hover:text-green-400 flex justify-between items-center bg-slate-950/40 transition-colors">
+                        <span>2. Official Vicky Ball & Equipment</span>
+                        <i id="icon-rule-2" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div id="rule-2" class="hidden p-4 text-xs text-gray-400 border-t border-slate-850 bg-slate-900/60 space-y-2 leading-relaxed">
+                        <p>• The entire tournament will be strictly conducted using official **Vicky Tennis Balls**.</p>
+                        <p>• Teams are completely responsible for carrying their own playing equipment, specifically cricket bats. Match-ready Vicky balls will be continuously supplied by the on-ground organizing body.</p>
+                    </div>
+                </div>
+
+                <!-- Rule Item 3 -->
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion('rule-3')" class="w-full text-left p-4 font-bold text-sm font-cyber uppercase tracking-wide text-gray-200 hover:text-green-400 flex justify-between items-center bg-slate-950/40 transition-colors">
+                        <span>3. Roster Constraints & Player Registry</span>
+                        <i id="icon-rule-3" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div id="rule-3" class="hidden p-4 text-xs text-gray-400 border-t border-slate-850 bg-slate-900/60 space-y-2 leading-relaxed">
+                        <p>• The tournament completely locks registration at **42 active players maximum** across **6 teams total**.</p>
+                        <p>• Every individual lineup field represents exactly **7 players** active on the turf during match configurations.</p>
+                        <p>• Absolutely no outside wildcard player entries are permitted once match schedules commence. Substitute fielders are authorized under strict physical injury assessment, entirely subject to the central umpire's green light.</p>
+                    </div>
+                </div>
+
+                <!-- Rule Item 4 -->
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion('rule-4')" class="w-full text-left p-4 font-bold text-sm font-cyber uppercase tracking-wide text-gray-200 hover:text-green-400 flex justify-between items-center bg-slate-950/40 transition-colors">
+                        <span>4. Net Run Rate & Playoff Advancement Mechanics</span>
+                        <i id="icon-rule-4" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div id="rule-4" class="hidden p-4 text-xs text-gray-400 border-t border-slate-850 bg-slate-900/60 space-y-2 leading-relaxed text-orange-200/90">
+                        <p>• The 3 outright winners from the initial qualifier matches automatically punch their tickets to the Playoffs.</p>
+                        <p>• The crucial 4th spot is grabbed by the **highest Net Run Rate (NRR) losing team**.</p>
+                        <p class="bg-black/30 p-2 rounded border border-slate-800 font-mono text-[11px] text-gray-400">NRR Math Formulation: [Total Runs Scored / Total Overs Faced] - [Total Runs Conceded / Total Overs Bowled]</p>
+                        <p>• **Critical Caveat:** If a batting team loses all 7 wickets before batting out their assigned quota, the calculator treats the inning as completing the full **6.0 overs** structurally.</p>
+                    </div>
+                </div>
+
+                <!-- Rule Item 5 -->
+                <div class="bg-slate-900 border border-slate-800/80 rounded-xl overflow-hidden">
+                    <button onclick="toggleAccordion('rule-5')" class="w-full text-left p-4 font-bold text-sm font-cyber uppercase tracking-wide text-gray-200 hover:text-green-400 flex justify-between items-center bg-slate-950/40 transition-colors">
+                        <span>5. Central Umpire Authority & Fair Play Points</span>
+                        <i id="icon-rule-5" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div id="rule-5" class="hidden p-4 text-xs text-gray-400 border-t border-slate-850 bg-slate-900/60 space-y-2 leading-relaxed">
+                        <p>• The field umpire's decision is completely absolute, final, and binding under all circumstances.</p>
+                        <p>• Any physical/verbal altercation or behavior undermining match officials triggers negative deduction penalties directly affecting your standings on the **Best Discipline Leaderboard** and carries risks of total team disqualification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- PREMIUM HIGH-TECH FOOTER CREDITS -->
+    <footer class="max-w-6xl mx-auto px-4 mt-12 mb-6 text-center border-t border-slate-800/60 pt-6 text-xs text-gray-500 font-cyber tracking-wider space-y-2">
+        <p>© 2026 CWT. All Rights Reserved.</p>
+        <p class="text-[11px] text-gray-400">
+            Website Engineered with <i class="fa-solid fa-heart text-green-500 animate-pulse"></i> by 
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400 font-black tracking-widest uppercase">LALA</span>
+        </p>
+    </footer>
+
+    <!-- MOBILE-OPTIMIZED PERSISTENT NAVIGATION BAR -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-slate-950/95 backdrop-blur-md border-t border-slate-800/80 px-2 py-2 z-50 shadow-2xl">
+        <div class="max-w-md mx-auto flex items-center justify-between text-gray-400 font-semibold text-[11px] uppercase tracking-wider font-cyber">
+            
+            <button onclick="switchTab('fixtures-section', this)" class="active-tab flex-1 py-2 rounded-xl flex flex-col items-center gap-1 transition-all">
+                <i class="fa-solid fa-calendar-check text-base"></i>
+                <span>Fixtures</span>
+            </button>
+
+            <button onclick="switchTab('teams-section', this)" class="flex-1 py-2 rounded-xl flex flex-col items-center gap-1 transition-all hover:text-gray-200">
+                <i class="fa-solid fa-people-group text-base"></i>
+                <span>Teams</span>
+            </button>
+
+            <button onclick="switchTab('registry-section', this)" class="flex-1 py-2 rounded-xl flex flex-col items-center gap-1 transition-all hover:text-gray-200">
+                <i class="fa-solid fa-id-card text-base"></i>
+                <span>Players</span>
+            </button>
+
+            <button onclick="switchTab('stats-section', this)" class="flex-1 py-2 rounded-xl flex flex-col items-center gap-1 transition-all hover:text-gray-200">
+                <i class="fa-solid fa-chart-simple text-base"></i>
+                <span>Stats</span>
+            </button>
+
+            <button onclick="switchTab('rules-section', this)" class="flex-1 py-2 rounded-xl flex flex-col items-center gap-1 transition-all hover:text-gray-200">
+                <i class="fa-solid fa-gavel text-base"></i>
+                <span>Rules</span>
+            </button>
+
+        </div>
+    </nav>
+
+    <!-- CONTROLLER JAVASCRIPT FUNCTIONS -->
+    <script>
+        // Tab Engine Controller Switching
+        function switchTab(targetSectionId, clickedButton) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+            
+            document.getElementById(targetSectionId).classList.remove('hidden');
+            
+            const navButtons = clickedButton.parentElement.querySelectorAll('button');
+            navButtons.forEach(btn => {
+                btn.classList.remove('active-tab', 'text-white');
+                btn.classList.add('text-gray-400');
+            });
+            
+            clickedButton.classList.add('active-tab');
+            clickedButton.classList.remove('text-gray-400');
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Accordion Animation Component Engine
+        function toggleAccordion(panelElementId) {
+            const targetPanel = document.getElementById(panelElementId);
+            const targetChevronIcon = document.getElementById('icon-' + panelElementId);
+            
+            if (targetPanel.classList.contains('hidden')) {
+                targetPanel.classList.remove('hidden');
+                targetChevronIcon.classList.add('rotate-180', 'text-green-400');
+            } else {
+                targetPanel.classList.add('hidden');
+                targetChevronIcon.classList.remove('rotate-180', 'text-green-400');
+            }
+        }
+    </script>
+</body>
+</html>
