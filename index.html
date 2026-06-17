@@ -77,12 +77,17 @@
             </div>
         </div>
 
-        <!-- Dynamic Player Registration Action Button -->
-        <div class="mt-6 max-w-4xl mx-auto px-2">
+        <!-- Dynamic Dual Action Buttons (Registration & Player Link Integration) -->
+        <div class="mt-6 max-w-4xl mx-auto px-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
             <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc4HSct5L8VICG6Kh-edHuYb00OnNIva8hMLNQHbKWTmKDNgQ/formResponse" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-green-500 via-emerald-600 to-cyan-500 font-cyber font-bold text-xs tracking-widest uppercase text-white py-3 px-4 rounded-xl transition-all duration-300 hover:scale-[1.01] shadow-[0_0_15px_rgba(34,197,94,0.25)] hover:shadow-[0_0_25px_rgba(34,197,94,0.5)] group">
                 <i class="fa-solid fa-file-signature text-sm group-hover:animate-bounce"></i> 
-                <span>Click Here for Player Registration</span> 
+                <span>Player Registration</span> 
                 <i class="fa-solid fa-circle-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
+            </a>
+            <a href="https://t13175941-hue.github.io/player/" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 font-cyber font-bold text-xs tracking-widest uppercase text-white py-3 px-4 rounded-xl transition-all duration-300 hover:scale-[1.01] shadow-[0_0_15px_rgba(6,182,212,0.25)] hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] group">
+                <i class="fa-solid fa-users-viewfinder text-sm group-hover:animate-pulse"></i> 
+                <span>View Registered Player Details</span> 
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
             </a>
         </div>
     </header>
@@ -270,7 +275,7 @@
             </div>
         </div>
 
-        <!-- SECTION 2: THE 6 SQUADS WITH CAPTAINS UPDATED -->
+        <!-- SECTION 2: THE 6 SQUADS -->
         <div id="teams-section" class="tab-content hidden space-y-6">
             <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400 border-l-4 border-green-500 pl-2">
                 Participating Teams & Squads
@@ -334,6 +339,22 @@
                 <span class="font-cyber text-xs bg-slate-900 border border-slate-800 px-3 py-1 rounded-full text-gray-400 font-bold">Total Players: 48</span>
             </div>
 
+            <!-- Contextual Navigation Banner linking to the Player Details Deployment -->
+            <div class="bg-cyan-500/5 border border-cyan-500/20 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-cyan-500/10 border border-cyan-500/30 rounded-xl flex items-center justify-center text-cyan-400 shrink-0">
+                        <i class="fa-solid fa-address-card text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-cyber font-bold text-sm text-cyan-400 uppercase tracking-wide">Detailed Player Profiles Dashboard</h4>
+                        <p class="text-xs text-gray-400 mt-0.5">Looking for player form stats, analytical cards, or detailed performance matrices?</p>
+                    </div>
+                </div>
+                <a href="https://t13175941-hue.github.io/player/" target="_blank" class="bg-slate-950 hover:bg-cyan-500/10 border border-cyan-500/40 text-cyan-400 font-cyber font-bold text-[11px] tracking-wider uppercase px-4 py-2 rounded-lg transition-all shrink-0">
+                    Open Profiles <i class="fa-solid fa-external-link ml-1 text-[10px]"></i>
+                </a>
+            </div>
+
             <!-- Modern Compact Matrix Grid -->
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                 <script>
@@ -345,9 +366,9 @@
                         "Chandan Sutar", "Biswajit Barik", "Surya Prasad Nayak", "Prakash Sahoo(Kunu)", "Akshya Kumar Sahoo",
                         "Abhinna Nayak", "Sunil Kumar Mahapatro", "Sai Mohanty", "Rohit Prasad", "Mrutyunjaya Behera",
                         "Pratik Kumar", "Gudu Kumar", "Ritesh Prasad", "Yash Jaiswal", "Samrat Sethi",
-                        "Rahul Jaiswal", "Aman Nayak(Baburao)", "Arman Biswal", "Jubaraj Behera", "Rajbeer Sahu",
-                        "Harmeet Singh", "Bapun Sahu", "Amit Pradhan", "Jyoti Ranjan Pani", "Tanmay Kumar Sahoo",
-                        "Adarsh Behera", "Sourav Das", "Dibya Darshan Das"
+                        "Rahul Jaiswal", "Aman Nayak(Baburao)", "Jubaraj Behera", "Harmeet Singh", "Bapun Sahu",
+                        "Amit Pradhan", "Jyoti Ranjan Pani", "Tanmay Kumar Sahoo", "Adarsh Behera", "Sourav Das",
+                        "Dibya Darshan Das"
                     ];
 
                     let registryHTML = '';
@@ -501,7 +522,7 @@
 
         <!-- SECTION 5: ACCORDION INTERACTIVE RULES AND REGULATIONS -->
         <div id="rules-section" class="tab-content hidden space-y-6">
-            <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400 border-l-4 border-green-400 pl-2">
+            <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400 border-l-4 border-green-500 pl-2">
                 Rules & Regulations
             </h2>
             
