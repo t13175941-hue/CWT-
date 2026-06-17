@@ -175,22 +175,22 @@
                         </div>
                     </div>
 
-                    <!-- Playoffs Card -->
+                    <!-- Playoffs Card (Updated Playoff Format Order) -->
                     <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-4">
                         <div class="flex items-center justify-between border-b border-slate-800 pb-2">
-                            <span class="font-cyber text-xs tracking-wider text-purple-400 font-bold uppercase">Stage 2: Playoffs</span>
+                            <span class="font-cyber text-xs tracking-wider text-purple-400 font-bold uppercase">Stage 2: Playoffs Order</span>
                             <span class="text-[11px] bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded border border-purple-500/20">4 Teams Bracket</span>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-3 space-y-2">
-                                <p class="text-[10px] uppercase text-purple-400 font-bold font-cyber">Semifinal 1</p>
-                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Qualifier #1</span> <span class="font-bold text-gray-500">TBD</span></p>
-                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Wildcard (Highest NRR Loser)</span> <span class="font-bold text-gray-500">TBD</span></p>
+                                <p class="text-[10px] uppercase text-purple-400 font-bold font-cyber">Semifinal 1 (Top 2 NRR)</p>
+                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Rank #1 NRR Team</span> <span class="font-bold text-gray-500">TBD</span></p>
+                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Rank #2 NRR Team</span> <span class="font-bold text-gray-500">TBD</span></p>
                             </div>
                             <div class="bg-slate-950 border border-slate-800/80 rounded-xl p-3 space-y-2">
-                                <p class="text-[10px] uppercase text-purple-400 font-bold font-cyber">Semifinal 2</p>
-                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Qualifier #2</span> <span class="font-bold text-gray-500">TBD</span></p>
-                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Qualifier #3</span> <span class="font-bold text-gray-500">TBD</span></p>
+                                <p class="text-[10px] uppercase text-purple-400 font-bold font-cyber">Semifinal 2 (3rd & 4th NRR)</p>
+                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Rank #3 NRR Team</span> <span class="font-bold text-gray-500">TBD</span></p>
+                                <p class="text-xs font-semibold flex justify-between text-gray-400"><span>Rank #4 NRR Team</span> <span class="font-bold text-gray-500">TBD</span></p>
                             </div>
                         </div>
                     </div>
@@ -213,12 +213,13 @@
                         NRR Standings
                     </h2>
                     
-                    <!-- Explanation Alert Banner -->
+                    <!-- Explanation Alert Banner (Updated Playoff Format Order Description) -->
                     <div class="bg-orange-500/5 border border-orange-500/20 rounded-xl p-3 text-xs text-orange-200/90 leading-relaxed">
-                        <strong class="text-orange-400 font-cyber block mb-1 uppercase"><i class="fa-solid fa-circle-info mr-1"></i> Wildcard Rule Math:</strong>
-                        The 3 match losers are ranked below. The losing team displaying the highest **Net Run Rate (NRR)** will secure the 4th playoff spot. 
-                        <span class="block mt-1.5 text-[11px] font-mono bg-black/40 p-1.5 rounded text-gray-400">NRR = (Runs Scored / Overs Faced) - (Runs Conceded / Overs Bowled)</span>
-                        <span class="block mt-1 text-[10px] text-gray-500 italic">*If a team gets completely bowled out, the full 6 overs apply to the calculations.*</span>
+                        <strong class="text-orange-400 font-cyber block mb-1 uppercase"><i class="fa-solid fa-circle-info mr-1"></i> Playoff Formatting:</strong>
+                        The 3 match winners advance, and the top losing team joins them as the 4th wildcard team. All 4 qualified teams are then sorted and ranked by NRR. 
+                        <span class="block mt-1.5 font-bold text-gray-300">• SF 1: Rank #1 vs Rank #2</span>
+                        <span class="block text-gray-300">• SF 2: Rank #3 vs Rank #4</span>
+                        <span class="block mt-1.5 text-[10px] text-gray-500 italic">*If a team gets completely bowled out, the full 6 overs apply to the calculations.*</span>
                     </div>
 
                     <!-- NRR Table Object -->
@@ -233,32 +234,32 @@
                             </thead>
                             <tbody class="divide-y divide-slate-800/60 font-semibold">
                                 <tr class="hover:bg-slate-850/40 transition-colors">
-                                    <td class="p-3 text-gray-200">Team 1</td>
+                                    <td class="p-3 text-gray-200">Rangers</td>
                                     <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
                                     <td class="p-3 text-right font-mono text-orange-400">0.000</td>
                                 </tr>
                                 <tr class="hover:bg-slate-850/40 transition-colors">
-                                    <td class="p-3 text-gray-200">Team 2</td>
+                                    <td class="p-3 text-gray-200">Shiva’s Strikers</td>
                                     <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
                                     <td class="p-3 text-right font-mono text-orange-400">0.000</td>
                                 </tr>
                                 <tr class="hover:bg-slate-850/40 transition-colors">
-                                    <td class="p-3 text-gray-200">Team 3</td>
+                                    <td class="p-3 text-gray-200">Tiger jinda hai</td>
                                     <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
                                     <td class="p-3 text-right font-mono text-orange-400">0.000</td>
                                 </tr>
                                 <tr class="hover:bg-slate-850/40 transition-colors">
-                                    <td class="p-3 text-gray-200">Team 4</td>
+                                    <td class="p-3 text-gray-200">Night king 👑</td>
                                     <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
                                     <td class="p-3 text-right font-mono text-orange-400">0.000</td>
                                 </tr>
                                 <tr class="hover:bg-slate-850/40 transition-colors">
-                                    <td class="p-3 text-gray-200">Team 5</td>
+                                    <td class="p-3 text-gray-200">Sree Ganesh</td>
                                     <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
                                     <td class="p-3 text-right font-mono text-orange-400">0.000</td>
                                 </tr>
                                 <tr class="hover:bg-slate-850/40 transition-colors">
-                                    <td class="p-3 text-gray-200">Team 6</td>
+                                    <td class="p-3 text-gray-200">Aggressive shooters</td>
                                     <td class="p-3 text-center"><span class="bg-slate-800 text-gray-400 px-1.5 py-0.5 rounded text-[10px]">In Race</span></td>
                                     <td class="p-3 text-right font-mono text-orange-400">0.000</td>
                                 </tr>
@@ -269,7 +270,7 @@
             </div>
         </div>
 
-        <!-- SECTION 2: THE 6 SQUADS AND HOVER LOGOS -->
+        <!-- SECTION 2: THE 6 SQUADS WITH LOCAL IMAGE FILE PATHS CONNECTED -->
         <div id="teams-section" class="tab-content hidden space-y-6">
             <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400 border-l-4 border-green-500 pl-2">
                 Participating Teams & Squads
@@ -277,23 +278,32 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <script>
-                    const totalTeamsCount = 6;
+                    const officialTeams = [
+                        { name: "Rangers", captain: "Laxmikant Panda", logo: "rangers.png" },
+                        { name: "Shiva’s Strikers", captain: "Subhasis Dhal", logo: "shivas.png" },
+                        { name: "Tiger jinda hai", captain: "Chandan Sutar", logo: "tiger.png" },
+                        { name: "Night king 👑", captain: "Biswajit Barik", logo: "nightking.png" },
+                        { name: "Sree Ganesh", captain: "Dibya Ranjan Das", logo: "sreeganesh.png" },
+                        { name: "Aggressive shooters", captain: "Pratik Kumar", logo: "shooters.png" }
+                    ];
+
                     let teamsHTML = '';
-                    for (let t = 1; t <= totalTeamsCount; t++) {
+                    for (let i = 0; i < officialTeams.length; i++) {
+                        let currentTeam = officialTeams[i];
                         teamsHTML += `
                         <div class="bg-slate-900 border border-slate-800/80 hover:border-green-500/30 rounded-2xl p-4 transition-all duration-300 shadow-lg">
                             <div class="flex items-center gap-4 border-b border-slate-800 pb-3 mb-3">
                                 <div class="team-logo-container w-14 h-14 bg-slate-950 border border-slate-800 rounded-xl flex items-center justify-center p-1 overflow-hidden shrink-0">
-                                    <img src="https://placehold.co/150x150/0f172a/22c55e?text=T${t}" alt="Team Logo" class="w-full h-full object-contain rounded">
+                                    <img src="${currentTeam.logo}" alt="${currentTeam.name} Logo" class="w-full h-full object-contain rounded">
                                 </div>
                                 <div>
-                                    <h3 class="font-cyber font-bold text-lg text-gray-100">Team - ${t}</h3>
+                                    <h3 class="font-cyber font-bold text-lg text-gray-100">${currentTeam.name}</h3>
                                     <span class="text-[10px] tracking-wider font-cyber font-bold uppercase bg-green-500/10 text-green-400 px-2 py-0.5 rounded border border-green-500/20">Active Squad</span>
                                 </div>
                             </div>
                             <ul class="space-y-1.5 text-xs font-semibold">
                                 <li class="bg-gradient-to-r from-yellow-500/10 to-transparent border border-yellow-500/20 px-2.5 py-1.5 rounded-lg flex items-center justify-between">
-                                    <span class="text-yellow-400"><i class="fa-solid fa-star mr-1.5"></i> TBD</span>
+                                    <span class="text-yellow-400"><i class="fa-solid fa-star mr-1.5"></i> ${currentTeam.captain}</span>
                                     <span class="font-cyber text-[9px] bg-yellow-500/20 text-yellow-400 px-1.5 py-0.2 rounded font-bold uppercase">Captain</span>
                                 </li>
                                 <li class="bg-slate-950/40 border border-slate-800/50 text-gray-300 px-2.5 py-1.5 rounded-lg flex justify-between"><span>2. TBD</span><span class="text-gray-600 text-[10px]">Player</span></li>
@@ -302,6 +312,11 @@
                                 <li class="bg-slate-950/40 border border-slate-800/50 text-gray-300 px-2.5 py-1.5 rounded-lg flex justify-between"><span>5. TBD</span><span class="text-gray-600 text-[10px]">Player</span></li>
                                 <li class="bg-slate-950/40 border border-slate-800/50 text-gray-300 px-2.5 py-1.5 rounded-lg flex justify-between"><span>6. TBD</span><span class="text-gray-600 text-[10px]">Player</span></li>
                                 <li class="bg-slate-950/40 border border-slate-800/50 text-gray-300 px-2.5 py-1.5 rounded-lg flex justify-between"><span>7. TBD</span><span class="text-gray-600 text-[10px]">Player</span></li>
+                                <!-- Premium 8th Highlighted Substitution Slot -->
+                                <li class="bg-gradient-to-r from-purple-500/15 to-transparent border border-purple-500/30 text-purple-300 px-2.5 py-1.5 rounded-lg flex justify-between items-center mt-2 shadow-sm">
+                                    <span>8. TBD</span>
+                                    <span class="font-cyber text-[9px] bg-purple-500/20 text-purple-400 px-1.5 py-0.5 rounded border border-purple-500/30 font-black uppercase tracking-wider">Substitute</span>
+                                </li>
                             </ul>
                         </div>`;
                     }
@@ -310,13 +325,13 @@
             </div>
         </div>
 
-        <!-- SECTION 3: 50 PLAYER MASTER REGISTRY -->
+        <!-- SECTION 3: 48 PLAYER MASTER REGISTRY -->
         <div id="registry-section" class="tab-content hidden space-y-6">
             <div class="flex items-center justify-between border-l-4 border-green-500 pl-2">
                 <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400">
                     Official Tournament Registry
                 </h2>
-                <span class="font-cyber text-xs bg-slate-900 border border-slate-800 px-3 py-1 rounded-full text-gray-400 font-bold">Total Players: 50</span>
+                <span class="font-cyber text-xs bg-slate-900 border border-slate-800 px-3 py-1 rounded-full text-gray-400 font-bold">Total Players: 48</span>
             </div>
 
             <!-- Modern Compact Matrix Grid -->
@@ -324,18 +339,19 @@
                 <script>
                     const registeredPlayers = [
                         "Abhisek Dash", "Mukund Kumar", "Sunny Choubey", "Subhasis Dhala", "Sanu Behera",
-                        "Subham Rout", "Sarthak Kumar", "Biswajit Nayak", "Laxmikant Panda", "Abhisek Sahoo",
-                        "Sunil Kumar", "Jahangir Alam", "Anuj Singh", "Prince Singh", "Biswajit Shetty",
-                        "Bapu Kumar", "Tapan Mohanty", "Priyanshu Singh", "Abhisek Nayak", "Subhasis Nayak",
-                        "Chandan Sutar", "Barik Kumar", "Surya Prasad Nayak", "Kunu Kumar", "Akshya Kumar Sahoo",
+                        "Subham Rout", "Sai Sarthak Sahoo", "Biswajit Nayak", "Laxmikant Panda", "Abhisek Sahoo",
+                        "Sunil Behera", "Jahangir Alam", "Anuj Singh", "Prince Singh", "Biswajit Shethi",
+                        "Subhasis Karan(Bapu)", "Tapan Mohanty", "Priyanshu Singh", "Abhisek Nayak", "Subhasis Nayak",
+                        "Chandan Sutar", "Biswajit Barik", "Surya Prasad Nayak", "Prakash Sahoo(Kunu)", "Akshya Kumar Sahoo",
                         "Abhinna Nayak", "Sunil Kumar Mahapatro", "Sai Mohanty", "Rohit Prasad", "Mrutyunjaya Behera",
                         "Pratik Kumar", "Gudu Kumar", "Ritesh Prasad", "Yash Jaiswal", "Samrat Sethi",
-                        "Rahul Kumar", "Baburao Kumar", "Arman Biswal", "Jubaraj Behera", "Rajbeer Sahu",
-                        "Harmeet Singh", "Bapun Kumar", "Amit Kumar", "Jyoti Ranjan Pani", "Tanmay Kumar Sahoo"
+                        "Rahul Jaiswal", "Aman Nayak(Baburao)", "Arman Biswal", "Jubaraj Behera", "Rajbeer Sahu",
+                        "Harmeet Singh", "Bapun Sahu", "Amit Pradhan", "Jyoti Ranjan Pani", "Tanmay Kumar Sahoo",
+                        "Adarsh Behera", "Sourav Das", "Dibya Darshan Das"
                     ];
 
                     let registryHTML = '';
-                    for (let p = 1; p <= 50; p++) {
+                    for (let p = 1; p <= 48; p++) {
                         let playerName = registeredPlayers[p - 1] || "TBD";
                         registryHTML += `
                         <div class="bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800/80 rounded-xl p-2.5 flex items-center gap-2.5 shadow-sm hover:border-slate-700 transition-colors">
@@ -353,7 +369,7 @@
             </div>
         </div>
 
-        <!-- SECTION 4: THE 5 HONOR LEADERBOARDS (TOP 5 HIGHLIGHTS) -->
+        <!-- SECTION 4: THE 5 HONOR LEADERBOARDS -->
         <div id="stats-section" class="tab-content hidden space-y-8">
             <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400 border-l-4 border-green-500 pl-2">
                 Tournament Stats & Honors Center
@@ -466,14 +482,15 @@
                 </h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
                     <div class="bg-gradient-to-r from-emerald-500/20 to-emerald-500/5 border border-emerald-500/30 rounded-xl p-3 flex items-center justify-between font-bold">
-                        <div class="flex items-center gap-2"><span class="font-cyber text-emerald-400">#1</span><span>Team - 1</span></div>
+                        <div class="flex items-center gap-2"><span class="font-cyber text-emerald-400">#1</span><span>Rangers</span></div>
                         <span class="font-mono bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded text-[11px]">100 Pts</span>
                     </div>
                     <script>
-                        for(let t=2; t<=6; t++) {
+                        const teamDisciplineList = ["Shiva’s Strikers", "Tiger jinda hai", "Night king 👑", "Sree Ganesh", "Aggressive shooters"];
+                        for(let t=0; t<teamDisciplineList.length; t++) {
                             document.write(`
                             <div class="bg-slate-950/60 border border-slate-800/60 rounded-xl p-3 flex items-center justify-between font-semibold text-gray-400">
-                                <div class="flex items-center gap-2"><span class="font-cyber text-gray-600 font-bold">#${t}</span><span>Team - ${t}</span></div>
+                                <div class="flex items-center gap-2"><span class="font-cyber text-gray-600 font-bold">#${t+2}</span><span>${teamDisciplineList[t]}</span></div>
                                 <span class="font-mono bg-slate-900 text-gray-500 px-2 py-0.5 rounded text-[11px]">100 Pts</span>
                             </div>`);
                         }
@@ -521,8 +538,8 @@
                         <i id="icon-rule-3" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
                     </button>
                     <div id="rule-3" class="hidden p-4 text-xs text-gray-400 border-t border-slate-850 bg-slate-900/60 space-y-2 leading-relaxed">
-                        <p>• The tournament completely locks registration at **50 active players maximum** across **6 teams total**.</p>
-                        <p>• Every individual lineup field represents exactly **7 players** active on the turf during match configurations.</p>
+                        <p>• The tournament completely locks registration at **48 active players maximum** across **6 teams total**.</p>
+                        <p>• Every individual squad represents **7 active field players** and exactly **1 designated substitution player** (8 total squad slots).</p>
                         <p>• Absolutely no outside wildcard player entries are permitted once match schedules commence. Substitute fielders are authorized under strict physical injury assessment, entirely subject to the central umpire's green light.</p>
                     </div>
                 </div>
@@ -530,12 +547,14 @@
                 <!-- Rule Item 4 -->
                 <div class="bg-slate-900 border border-slate-800/80 rounded-xl overflow-hidden">
                     <button onclick="toggleAccordion('rule-4')" class="w-full text-left p-4 font-bold text-sm font-cyber uppercase tracking-wide text-gray-200 hover:text-green-400 flex justify-between items-center bg-slate-950/40 transition-colors">
-                        <span>4. Net Run Rate & Playoff Advancement Mechanics</span>
+                        <span>4. Net Run Rate & Playoff Layout Ordering</span>
                         <i id="icon-rule-4" class="fa-solid fa-chevron-down text-xs transition-transform duration-300"></i>
                     </button>
                     <div id="rule-4" class="hidden p-4 text-xs text-gray-400 border-t border-slate-850 bg-slate-900/60 space-y-2 leading-relaxed text-orange-200/90">
-                        <p>• The 3 outright winners from the initial qualifier matches automatically punch their tickets to the Playoffs.</p>
-                        <p>• The crucial 4th spot is grabbed by the **highest Net Run Rate (NRR) losing team**.</p>
+                        <p>• The 3 outright winners from the initial qualifier matches advance directly. The top-performing losing team completes the 4-team playoff field via the wildcard slot.</p>
+                        <p>• All 4 qualifying teams are sorted globally by Net Run Rate (NRR) and matched into distinct brackets:</p>
+                        <p class="font-bold text-gray-300">• Semifinal 1: Rank #1 NRR Team vs Rank #2 NRR Team</p>
+                        <p class="font-bold text-gray-300">• Semifinal 2: Rank #3 NRR Team vs Rank #4 NRR Team</p>
                         <p class="bg-black/30 p-2 rounded border border-slate-800 font-mono text-[11px] text-gray-400">NRR Math Formulation: [Total Runs Scored / Total Overs Faced] - [Total Runs Conceded / Total Overs Bowled]</p>
                         <p>• **Critical Caveat:** If a batting team loses all 7 wickets before batting out their assigned quota, the calculator treats the inning as completing the full assigned quota structurally (**6.0 overs**).</p>
                     </div>
