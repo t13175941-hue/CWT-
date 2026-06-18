@@ -77,16 +77,21 @@
             </div>
         </div>
 
-        <!-- Dynamic Dual Action Buttons -->
-        <div class="mt-6 max-w-4xl mx-auto px-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc4HSct5L8VICG6Kh-edHuYb00OnNIva8hMLNQHbKWTmKDNgQ/formResponse" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-green-500 via-emerald-600 to-cyan-500 font-cyber font-bold text-xs tracking-widest uppercase text-white py-3 px-4 rounded-xl transition-all duration-300 hover:scale-[1.01] shadow-[0_0_15px_rgba(34,197,94,0.25)] hover:shadow-[0_0_25px_rgba(34,197,94,0.5)] group">
+        <!-- Dynamic Responsive Action Dashboard Buttons -->
+        <div class="mt-6 max-w-5xl mx-auto px-2 grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <a href="https://docs.google.com/forms/u/0/d/e/1FAIpQLSc4HSct5L8VICG6Kh-edHuYb00OnNIva8hMLNQHbKWTmKDNgQ/formResponse" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-green-500 via-emerald-600 to-cyan-500 font-cyber font-bold text-[11px] md:text-xs tracking-widest uppercase text-white py-3 px-4 rounded-xl transition-all duration-300 hover:scale-[1.01] shadow-[0_0_15px_rgba(34,197,94,0.25)] hover:shadow-[0_0_25px_rgba(34,197,94,0.5)] group">
                 <i class="fa-solid fa-file-signature text-sm group-hover:animate-bounce"></i> 
                 <span>Player Registration</span> 
                 <i class="fa-solid fa-circle-arrow-right text-xs transition-transform group-hover:translate-x-1"></i>
             </a>
-            <a href="https://t13175941-hue.github.io/player/" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 font-cyber font-bold text-xs tracking-widest uppercase text-white py-3 px-4 rounded-xl transition-all duration-300 hover:scale-[1.01] shadow-[0_0_15px_rgba(6,182,212,0.25)] hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] group">
+            <a href="https://t13175941-hue.github.io/player/" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 font-cyber font-bold text-[11px] md:text-xs tracking-widest uppercase text-white py-3 px-4 rounded-xl transition-all duration-300 hover:scale-[1.01] shadow-[0_0_15px_rgba(6,182,212,0.25)] hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] group">
                 <i class="fa-solid fa-users-viewfinder text-sm group-hover:animate-pulse"></i> 
-                <span>View Registered Player Details</span> 
+                <span>Player Profiles</span> 
+                <i class="fa-solid fa-arrow-up-right-from-square text-xs transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+            </a>
+            <a href="https://t13175941-hue.github.io/rulebook/" target="_blank" class="w-full inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-purple-600 via-fuchsia-600 to-pink-500 font-cyber font-bold text-[11px] md:text-xs tracking-widest uppercase text-white py-3 px-4 rounded-xl transition-all duration-300 hover:scale-[1.01] shadow-[0_0_15px_rgba(168,85,247,0.25)] hover:shadow-[0_0_25px_rgba(168,85,247,0.5)] group">
+                <i class="fa-solid fa-book-open text-sm group-hover:animate-pulse"></i> 
+                <span>Official Rulebook</span> 
                 <i class="fa-solid fa-arrow-up-right-from-square text-xs transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
             </a>
         </div>
@@ -366,7 +371,7 @@
                         "Chandan Sutar", "Biswajit Barik", "Surya Prasad Nayak", "Prakash Sahoo(Kunu)", "Akshya Kumar Sahoo",
                         "Abhinna Nayak", "Sunil Kumar Mahapatro", "Sai Mohanty", "Rohit Prasad", "Mrutyunjaya Behera",
                         "Pratik Kumar", "Gudu Kumar", "Ritesh Prasad", "Yash Jaiswal", "Samrat Sethi",
-                        "Rahul Jaiswal", "Deepak Choubey", "Jubaraj Behera", "Harmeet Singh", "Bapun Sahu",
+                        "Rahul Jaiswal", "Aman Nayak(Baburao)", "Jubaraj Behera", "Harmeet Singh", "Bapun Sahu",
                         "Amit Pradhan", "Jyoti Ranjan Pani", "Tanmay Kumar Sahoo", "Adarsh Behera", "Sourav Das",
                         "Dibya Darshan Das", "Rajendra Nayak", "Bishnu Nayak"
                     ];
@@ -522,10 +527,28 @@
 
         <!-- SECTION 5: ACCORDION INTERACTIVE RULES AND REGULATIONS -->
         <div id="rules-section" class="tab-content hidden space-y-6">
-            <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400 border-l-4 border-green-500 pl-2">
-                Rules & Regulations
-            </h2>
+            <div class="flex items-center justify-between border-l-4 border-green-500 pl-2">
+                <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400">
+                    Rules & Regulations
+                </h2>
+            </div>
             
+            <!-- Contextual Navigation Banner linking to the rule book webpage -->
+            <div class="bg-purple-500/5 border border-purple-500/20 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-purple-500/10 border border-purple-500/30 rounded-xl flex items-center justify-center text-purple-400 shrink-0">
+                        <i class="fa-solid fa-book text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-cyber font-bold text-sm text-purple-400 uppercase tracking-wide">Official Digital Rulebook</h4>
+                        <p class="text-xs text-gray-400 mt-0.5">Looking to review the complete tournament structure clauses, structural parameters, or specific tiebreaker criteria setups?</p>
+                    </div>
+                </div>
+                <a href="https://t13175941-hue.github.io/rulebook/" target="_blank" class="bg-slate-950 hover:bg-purple-500/10 border border-purple-500/40 text-purple-400 font-cyber font-bold text-[11px] tracking-wider uppercase px-4 py-2 rounded-lg transition-all shrink-0">
+                    Open Rulebook <i class="fa-solid fa-external-link ml-1 text-[10px]"></i>
+                </a>
+            </div>
+
             <div class="space-y-3 max-w-4xl">
                 <!-- Rule Item 1 -->
                 <div class="bg-slate-900 border border-slate-800/80 rounded-xl overflow-hidden">
@@ -536,7 +559,7 @@
                     <div id="rule-1" class="hidden p-4 text-xs text-gray-400 border-t border-slate-850 bg-slate-900/60 space-y-2 leading-relaxed">
                         <p>• Every normal league match will strictly consist of **6 overs** per innings.</p>
                         <p>• A maximum bowling constraint applies: **No single bowler can deliver more than 2 overs** in an innings.</p>
-                        <p>• To ensure seamless schedule tracking, innings must be completed inside **25 minutes**. Slow over rates are subject to immediate run penalties.</p>
+                        <p>• To ensure seamless schedule tracking, innings must be completed inside **20 minutes**. Slow over rates are subject to immediate run penalties.</p>
                     </div>
                 </div>
 
