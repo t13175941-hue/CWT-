@@ -203,42 +203,48 @@
                         </div>
                     </div>
 
-                    <!-- Playoffs Card (Updated with official Semifinal matchups) -->
+                    <!-- Playoffs Card -->
                     <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-4">
                         <div class="flex items-center justify-between border-b border-slate-800 pb-2">
                             <span class="font-cyber text-xs tracking-wider text-purple-400 font-bold uppercase">Stage 2: Playoff Matchups</span>
-                            <span class="text-[11px] bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded border border-purple-500/20 font-bold">Knockouts Locked</span>
+                            <span class="text-[11px] bg-purple-500/10 text-purple-400 px-2 py-0.5 rounded border border-purple-500/20 font-bold">Completed</span>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <!-- Semifinal 1 -->
-                            <div class="bg-slate-950 border border-purple-500/30 rounded-xl p-4 space-y-2 neon-border-purple">
-                                <p class="text-[10px] uppercase text-purple-400 font-bold font-cyber flex justify-between"><span>Semifinal 1</span> <span class="text-gray-500 font-mono">Rank 1 vs Rank 2</span></p>
+                            <div class="bg-slate-950 border border-purple-500/10 rounded-xl p-4 space-y-2">
+                                <p class="text-[10px] uppercase text-purple-500 font-bold font-cyber flex justify-between"><span>Semifinal 1</span></p>
                                 <div class="space-y-1 mt-2">
-                                    <div class="text-sm font-black text-gray-100 flex items-center justify-between"><span>Night King</span></div>
-                                    <div class="text-[10px] font-bold text-purple-400 font-cyber py-0.5 text-center my-0.5 border-y border-purple-500/10">VS</div>
-                                    <div class="text-sm font-black text-gray-100 flex items-center justify-between"><span>Tiger Zinda Hai</span></div>
+                                    <div class="text-sm font-black text-gray-100 flex items-center justify-between"><span>Night King</span> <span class="text-green-400 text-[10px] uppercase font-cyber font-bold">WIN</span></div>
+                                    <div class="text-[10px] font-bold text-purple-500 font-cyber py-0.5 text-center my-0.5 border-y border-purple-500/5">VS</div>
+                                    <div class="text-sm font-semibold text-gray-500 line-through">Tiger Zinda Hai</div>
                                 </div>
                             </div>
                             <!-- Semifinal 2 -->
-                            <div class="bg-slate-950 border border-purple-500/30 rounded-xl p-4 space-y-2 neon-border-purple">
-                                <p class="text-[10px] uppercase text-purple-400 font-bold font-cyber flex justify-between"><span>Semifinal 2</span> <span class="text-gray-500 font-mono">Rank 3 vs Rank 4</span></p>
+                            <div class="bg-slate-950 border border-purple-500/10 rounded-xl p-4 space-y-2">
+                                <p class="text-[10px] uppercase text-purple-400 font-bold font-cyber flex justify-between"><span>Semifinal 2</span></p>
                                 <div class="space-y-1 mt-2">
-                                    <div class="text-sm font-black text-gray-100 flex items-center justify-between"><span>Rangers</span></div>
-                                    <div class="text-[10px] font-bold text-purple-400 font-cyber py-0.5 text-center my-0.5 border-y border-purple-500/10">VS</div>
-                                    <div class="text-sm font-black text-gray-100 flex items-center justify-between"><span>Shiva's Strikers</span></div>
+                                    <div class="text-sm font-black text-gray-100 flex items-center justify-between"><span>Rangers</span> <span class="text-green-400 text-[10px] uppercase font-cyber font-bold">WIN</span></div>
+                                    <div class="text-[10px] font-bold text-purple-500 font-cyber py-0.5 text-center my-0.5 border-y border-purple-500/5">VS</div>
+                                    <div class="text-sm font-semibold text-gray-500 line-through">Shiva's Strikers</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Grand Final Card -->
-                    <div class="bg-gradient-to-r from-yellow-950/20 via-slate-900 to-yellow-950/20 border-2 border-yellow-500/30 rounded-2xl p-5 text-center relative overflow-hidden">
-                        <div class="absolute -top-6 -right-6 w-16 h-16 bg-yellow-500/10 rounded-full blur-xl"></div>
-                        <p class="font-cyber text-sm tracking-widest text-yellow-500 font-black uppercase mb-3"><i class="fa-solid fa-crown mr-1"></i> The Grand Final <i class="fa-solid fa-crown ml-1"></i></p>
-                        <div class="flex items-center justify-center gap-4 max-w-md mx-auto">
-                            <div class="w-2/5 font-cyber font-bold text-sm text-gray-400 tracking-wide text-right">Winner SF 1</div>
-                            <div class="px-3 py-1 bg-yellow-500/10 border border-yellow-500/30 rounded font-cyber text-xs text-yellow-500 font-bold">VS</div>
-                            <div class="w-2/5 font-cyber font-bold text-sm text-gray-400 tracking-wide text-left">Winner SF 2</div>
+                    <!-- Grand Final Card (Crowned Champions Design) -->
+                    <div class="bg-gradient-to-r from-yellow-950/40 via-slate-900 to-yellow-950/40 border-2 border-yellow-500 rounded-2xl p-6 text-center relative overflow-hidden shadow-[0_0_30px_rgba(234,179,8,0.15)]">
+                        <div class="absolute -top-6 -right-6 w-24 h-12 bg-yellow-500/20 rounded-full blur-2xl"></div>
+                        <p class="font-cyber text-base tracking-widest text-yellow-500 font-black uppercase mb-4">
+                            <i class="fa-solid fa-trophy mr-2 animate-bounce"></i> Tournament Champions <i class="fa-solid fa-trophy ml-2 animate-bounce"></i>
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto">
+                            <div class="w-full sm:w-2/5 font-cyber font-black text-xl text-yellow-400 tracking-wider uppercase bg-yellow-500/10 border border-yellow-500/30 rounded-xl py-2.5 px-4 shadow-md">
+                                 Night King 👑
+                            </div>
+                            <div class="px-3 py-1 font-cyber text-xs text-gray-500 font-bold uppercase shrink-0">defeated</div>
+                            <div class="w-full sm:w-2/5 font-cyber font-bold text-md text-gray-400 tracking-wide bg-slate-950/60 border border-slate-800 rounded-xl py-2.5 px-4 line-through">
+                                Rangers
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -251,10 +257,8 @@
                     
                     <!-- Explanation Alert Banner -->
                     <div class="bg-orange-500/5 border border-orange-500/20 rounded-xl p-3 text-xs text-orange-200/90 leading-relaxed">
-                        <strong class="text-orange-400 font-cyber block mb-1 uppercase"><i class="fa-solid fa-circle-info mr-1"></i> Playoff Formatting:</strong>
-                        The 3 qualifier winners advanced alongside the highest NRR losing wildcard team. Teams are sorted below from highest to lowest index metrics. 
-                        <span class="block mt-1.5 font-bold text-gray-300">• SF 1: Rank #1 vs Rank #2</span>
-                        <span class="block text-gray-300">• SF 2: Rank #3 vs Rank #4</span>
+                        <strong class="text-orange-400 font-cyber block mb-1 uppercase"><i class="fa-solid fa-circle-info mr-1"></i> League Phase Records:</strong>
+                        The official wins, losses, points, and net run rates logged across the group configurations are detailed in the index schema below.
                     </div>
 
                     <!-- Modern 6-Column Points Table Object -->
@@ -272,8 +276,7 @@
                                     </tr>
                                 </thead>
                                 <tbody class="divide-y divide-slate-800/60 font-semibold text-gray-300">
-                                    <!-- Rank 1 -->
-                                    <tr class="hover:bg-slate-850/40 transition-colors bg-green-500/5">
+                                    <tr class="hover:bg-slate-850/40 transition-colors">
                                         <td class="p-3 text-center text-green-400 font-cyber">1</td>
                                         <td class="p-3 font-bold text-gray-100">Night King</td>
                                         <td class="p-3 text-center">1</td>
@@ -281,8 +284,7 @@
                                         <td class="p-3 text-center text-green-400 font-bold">2</td>
                                         <td class="p-3 text-right font-mono text-green-400">+17.500</td>
                                     </tr>
-                                    <!-- Rank 2 -->
-                                    <tr class="hover:bg-slate-850/40 transition-colors bg-green-500/5">
+                                    <tr class="hover:bg-slate-850/40 transition-colors">
                                         <td class="p-3 text-center text-green-400 font-cyber">2</td>
                                         <td class="p-3 font-bold text-gray-100">Tiger Zinda Hai</td>
                                         <td class="p-3 text-center">1</td>
@@ -290,8 +292,7 @@
                                         <td class="p-3 text-center text-green-400 font-bold">2</td>
                                         <td class="p-3 text-right font-mono text-green-400">+3.000</td>
                                     </tr>
-                                    <!-- Rank 3 -->
-                                    <tr class="hover:bg-slate-850/40 transition-colors bg-green-500/5">
+                                    <tr class="hover:bg-slate-850/40 transition-colors">
                                         <td class="p-3 text-center text-green-400 font-cyber">3</td>
                                         <td class="p-3 font-bold text-gray-100">Rangers</td>
                                         <td class="p-3 text-center">1</td>
@@ -299,8 +300,7 @@
                                         <td class="p-3 text-center text-green-400 font-bold">2</td>
                                         <td class="p-3 text-right font-mono text-green-400">+1.699</td>
                                     </tr>
-                                    <!-- Rank 4 -->
-                                    <tr class="hover:bg-slate-850/40 transition-colors bg-red-500/5">
+                                    <tr class="hover:bg-slate-850/40 transition-colors">
                                         <td class="p-3 text-center text-purple-400 font-cyber">4</td>
                                         <td class="p-3 text-gray-200">Shiva’s Strikers</td>
                                         <td class="p-3 text-center">0</td>
@@ -308,8 +308,7 @@
                                         <td class="p-3 text-center text-gray-400">0</td>
                                         <td class="p-3 text-right font-mono text-red-400">-1.699</td>
                                     </tr>
-                                    <!-- Rank 5 -->
-                                    <tr class="hover:bg-slate-850/40 transition-colors bg-red-500/5">
+                                    <tr class="hover:bg-slate-850/40 transition-colors">
                                         <td class="p-3 text-center text-red-500/70 font-cyber">5</td>
                                         <td class="p-3 text-gray-400">Aggressive Shooters</td>
                                         <td class="p-3 text-center">0</td>
@@ -317,8 +316,7 @@
                                         <td class="p-3 text-center text-gray-400">0</td>
                                         <td class="p-3 text-right font-mono text-red-400">-3.000</td>
                                     </tr>
-                                    <!-- Rank 6 -->
-                                    <tr class="hover:bg-slate-850/40 transition-colors bg-red-500/5">
+                                    <tr class="hover:bg-slate-850/40 transition-colors">
                                         <td class="p-3 text-center text-red-500/70 font-cyber">6</td>
                                         <td class="p-3 text-gray-400">Sree Ganesh</td>
                                         <td class="p-3 text-center">0</td>
@@ -349,7 +347,7 @@
                         </div>
                         <div>
                             <h3 class="font-cyber font-bold text-lg text-gray-100">Rangers</h3>
-                            <span class="text-[10px] tracking-wider font-cyber font-bold uppercase bg-green-500/10 text-green-400 px-2 py-0.5 rounded border border-green-500/20">Active Squad</span>
+                            <span class="text-[10px] tracking-wider font-cyber font-bold uppercase bg-slate-700/20 text-slate-400 px-2 py-0.5 rounded border border-slate-700/30">Runners-Up</span>
                         </div>
                     </div>
                     <ul class="space-y-1.5 text-xs font-semibold">
@@ -436,7 +434,7 @@
                         </div>
                         <div>
                             <h3 class="font-cyber font-bold text-lg text-gray-100">Night king 👑</h3>
-                            <span class="text-[10px] tracking-wider font-cyber font-bold uppercase bg-green-500/10 text-green-400 px-2 py-0.5 rounded border border-green-500/20">Active Squad</span>
+                            <span class="text-[10px] tracking-wider font-cyber font-bold uppercase bg-yellow-500/10 text-yellow-400 px-2 py-0.5 rounded border border-yellow-500/30 font-bold shadow-[0_0_10px_rgba(234,179,8,0.2)] animate-pulse">Champions</span>
                         </div>
                     </div>
                     <ul class="space-y-1.5 text-xs font-semibold">
@@ -577,7 +575,7 @@
             </div>
         </div>
 
-        <!-- SECTION 4: THE 5 HONOR LEADERBOARDS -->
+        <!-- SECTION 4: THE 5 HONOR LEADERBOARDS & FINAL FAIR PLAY VALUES -->
         <div id="stats-section" class="tab-content hidden space-y-8">
             <h2 class="font-cyber text-xl font-bold tracking-wide uppercase text-green-400 border-l-4 border-green-500 pl-2">
                 Tournament Stats & Honors Center
@@ -587,7 +585,7 @@
                 <!-- Leaderboard 1: Orange Cap -->
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 neon-border-orange relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-orange-500/10 text-orange-500 font-cyber text-[9px] tracking-widest font-black px-3 py-1 uppercase rounded-bl-xl border-l border-b border-orange-500/20">
-                        Batting
+                        Batting Winner
                     </div>
                     <h3 class="font-cyber font-bold text-sm text-orange-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                         <i class="fa-solid fa-graduation-cap"></i> Orange Cap Leaderboard
@@ -595,9 +593,9 @@
                     <div class="space-y-1.5 text-xs">
                         <div class="bg-gradient-to-r from-orange-500/20 to-orange-500/5 border border-orange-500/30 rounded-xl p-2.5 flex items-center justify-between font-bold">
                             <div class="flex items-center gap-2">
-                                <span class="font-cyber text-orange-400">#1</span><span>TBD</span>
+                                <span class="font-cyber text-orange-400">#1</span><span>Biswajit Barik</span>
                             </div>
-                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>M: 0</span><span>Avg: 0.0</span><span class="text-orange-400 font-bold">Runs: 0</span></div>
+                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>M: 3</span><span>Avg: 58.5</span><span class="text-orange-400 font-bold">Runs: 117</span></div>
                         </div>
                         <script>
                             for(let r=2; r<=5; r++){
@@ -614,7 +612,7 @@
                 <!-- Leaderboard 2: Purple Cap -->
                 <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 neon-border-purple relative overflow-hidden">
                     <div class="absolute top-0 right-0 bg-purple-500/10 text-purple-500 font-cyber text-[9px] tracking-widest font-black px-3 py-1 uppercase rounded-bl-xl border-l border-b border-purple-500/20">
-                        Bowling
+                        Bowling Winner
                     </div>
                     <h3 class="font-cyber font-bold text-sm text-purple-400 uppercase tracking-wider mb-3 flex items-center gap-1.5">
                         <i class="fa-solid fa-graduation-cap"></i> Purple Cap Leaderboard
@@ -622,9 +620,9 @@
                     <div class="space-y-1.5 text-xs">
                         <div class="bg-gradient-to-r from-purple-500/20 to-purple-500/5 border border-purple-500/30 rounded-xl p-2.5 flex items-center justify-between font-bold">
                             <div class="flex items-center gap-2">
-                                <span class="font-cyber text-purple-400">#1</span><span>TBD</span>
+                                <span class="font-cyber text-purple-400">#1</span><span>Mukund Thakur</span>
                             </div>
-                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>M: 0</span><span>Econ: 0.0</span><span class="text-purple-400 font-bold">Wkts: 0</span></div>
+                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>M: 3</span><span>Econ: 4.83</span><span class="text-purple-400 font-bold">Wkts: 7</span></div>
                         </div>
                         <script>
                             for(let r=2; r<=5; r++){
@@ -645,8 +643,8 @@
                     </h3>
                     <div class="space-y-1.5 text-xs">
                         <div class="bg-gradient-to-r from-cyan-500/20 to-cyan-500/5 border border-cyan-500/30 rounded-xl p-2.5 flex items-center justify-between font-bold">
-                            <div class="flex items-center gap-2"><span class="font-cyber text-cyan-400">#1</span><span>TBD</span></div>
-                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>Matches: 0</span><span class="text-cyan-400 font-bold">Points: 0</span></div>
+                            <div class="flex items-center gap-2"><span class="font-cyber text-cyan-400">#1</span><span>Subham Rout</span></div>
+                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>Matches: 3</span><span class="text-cyan-400 font-bold">Points: 100</span></div>
                         </div>
                         <script>
                             for(let r=2; r<=5; r++){
@@ -667,8 +665,8 @@
                     </h3>
                     <div class="space-y-1.5 text-xs">
                         <div class="bg-gradient-to-r from-yellow-500/20 to-yellow-500/5 border border-yellow-500/30 rounded-xl p-2.5 flex items-center justify-between font-bold">
-                            <div class="flex items-center gap-2"><span class="font-cyber text-yellow-500">#1</span><span>TBD</span></div>
-                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>Matches: 0</span><span class="text-yellow-400 font-bold">Rating: 0.0</span></div>
+                            <div class="flex items-center gap-2"><span class="font-cyber text-yellow-500">#1</span><span>Biswajit Nayak</span></div>
+                            <div class="font-mono text-gray-300 flex gap-4 text-[11px]"><span>Matches: 3</span><span class="text-yellow-400 font-bold">Rating: 4.0</span></div>
                         </div>
                         <script>
                             for(let r=2; r<=5; r++){
@@ -683,23 +681,35 @@
                 </div>
             </div>
 
-            <!-- Leaderboard 5: Best Discipline Table -->
+            <!-- Leaderboard 5: Final Verified Fair Play Table Matrix -->
             <div class="bg-slate-900 border border-slate-800 rounded-2xl p-4 space-y-3">
                 <h3 class="font-cyber font-bold text-sm text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
                     <i class="fa-solid fa-scale-balanced"></i> Fair Play & Team Discipline Ranking
                 </h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
-                    <div class="bg-gradient-to-r from-emerald-500/20 to-emerald-500/5 border border-emerald-500/30 rounded-xl p-3 flex items-center justify-between font-bold">
-                        <div class="flex items-center gap-2"><span class="font-cyber text-emerald-400">#1</span><span>Rangers</span></div>
-                        <span class="font-mono bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded text-[11px]">100 Pts</span>
-                    </div>
                     <script>
-                        const teamDisciplineList = ["Shiva's Strikers", "Tiger jinda hai", "Night king 👑", "Sree Ganesh", "Aggressive shooters"];
-                        for(let t=0; t<teamDisciplineList.length; t++) {
+                        const fairPlayStandings = [
+                            { name: "Sree Ganesh", pts: "100 Pts" },
+                            { name: "Aggressive shooters", pts: "90 Pts" },
+                            { name: "Night king 👑", pts: "80 Pts" },
+                            { name: "Rangers", pts: "70 Pts" },
+                            { name: "Shiva's Strikers", pts: "60 Pts" },
+                            { name: "Tiger jinda hai", pts: "50 Pts" }
+                        ];
+
+                        for(let t=0; t<fairPlayStandings.length; t++) {
+                            let rank = t + 1;
+                            let cardStyle = rank === 1 ? 'bg-gradient-to-r from-emerald-500/20 to-emerald-500/5 border border-emerald-500/30 font-bold text-gray-200 shadow-sm' : 'bg-slate-950/60 border border-slate-800/60 text-gray-400 font-semibold';
+                            let badgesStyle = rank === 1 ? 'bg-emerald-500/20 text-emerald-400' : 'bg-slate-900 text-gray-500';
+                            let indexNumberStyle = rank === 1 ? 'text-emerald-400' : 'text-gray-600';
+
                             document.write(`
-                            <div class="bg-slate-950/60 border border-slate-800/60 rounded-xl p-3 flex items-center justify-between font-semibold text-gray-400">
-                                <div class="flex items-center gap-2"><span class="font-cyber text-gray-600 font-bold">#${t+2}</span><span>${teamDisciplineList[t]}</span></div>
-                                <span class="font-mono bg-slate-900 text-gray-500 px-2 py-0.5 rounded text-[11px]">100 Pts</span>
+                            <div class="${cardStyle} rounded-xl p-3 flex items-center justify-between">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-cyber ${indexNumberStyle}">${rank}</span>
+                                    <span>${fairPlayStandings[t].name}</span>
+                                </div>
+                                <span class="font-mono ${badgesStyle} px-2 py-0.5 rounded text-[11px]">${fairPlayStandings[t].pts}</span>
                             </div>`);
                         }
                     </script>
@@ -715,7 +725,7 @@
                 </h2>
             </div>
             
-            <!-- Contextual Navigation Banner linking to the rule book webpage -->
+            <!-- Contextual Navigation Banner -->
             <div class="bg-purple-500/5 border border-purple-500/20 rounded-xl p-4 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm">
                 <div class="flex items-center gap-3">
                     <div class="w-10 h-10 bg-purple-500/10 border border-purple-500/30 rounded-xl flex items-center justify-center text-purple-400 shrink-0">
